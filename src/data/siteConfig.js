@@ -20,21 +20,21 @@ export const siteConfig = {
     satisfiedClients: '15+',
   },
   socials: [
-    { name: 'LinkedIn', url: 'https://linkedin.com', id: 'linkedin' },
-    { name: 'TikTok', url: 'https://tiktok.com', id: 'tiktok' },
-    { name: 'Instagram', url: 'https://instagram.com', id: 'instagram' },
+    { name: 'LinkedIn', url: 'linkedin.com/in/yanuar-rizki-94805b23b', id: 'linkedin' },
+    { name: 'TikTok', url: 'https://www.tiktok.com/@hatsu6961?is_from_webapp=1&sender_device=pc', id: 'tiktok' },
+    { name: 'Instagram', url: 'https://www.instagram.com/hatsu_214?stkn=MTMwd242bnIyM284bg==', id: 'instagram' },
   ],
   capabilities: [
-    { name: 'Motion Graphic Designer', percentage: 90, desc: 'Motion design for ads, social content, and brand visual assets. Creating seamless kinetic transitions and micro-interactions.', color: '#6260F3' },
-    { name: 'UI/UX Designer', percentage: 85, desc: 'Human-centered interfaces, wireframing, high-fidelity prototypes, design system curation, and cross-platform UX validation.', color: '#F25623' }
+    { name: 'Motion Graphic Designer', percentage: 90, desc: 'Motion design for ads, social content, and brand visual assets. Creating seamless kinetic transitions and micro-interactions.', color: '#ffffff' },
+    { name: 'UI/UX Designer', percentage: 85, desc: 'Human-centered interfaces, wireframing, high-fidelity prototypes, design system curation, and cross-platform UX validation.', color: '#ffffff' }
   ],
   tools: [
-    { name: 'After Effect', icon: '/icons/After_effect.svg', abbr: 'Ae', color: '#9999FF', bg: '#00005B' },
-    { name: 'Premiere Pro', icon: '/icons/Premiere pro.svg', abbr: 'Pr', color: '#EA77FF', bg: '#000055' },
-    { name: 'Figma', icon: '/icons/Figma.svg', type: 'image' },
-    { name: 'Capcut', icon: '/icons/Capcut.svg', type: 'image' },
-    { name: 'Illustrator', icon: '/icons/Illustrator.svg', abbr: 'Ai', color: '#FF9A00', bg: '#330000' },
-    { name: 'Photoshop', icon: '/icons/Photoshop.svg', abbr: 'Ps', color: '#31A8FF', bg: '#001E36' },
+    { name: 'After Effect', icon: '/icons/After Effect.png', abbr: 'Ae', color: '#9999FF', bg: '#00005B' },
+    { name: 'Premiere Pro', icon: '/icons/Premiere Pro.png', abbr: 'Pr', color: '#EA77FF', bg: '#000055' },
+    { name: 'Figma', icon: '/icons/Figma.png', type: 'image' },
+    { name: 'Capcut', icon: '/icons/Capcut.png', type: 'image' },
+    { name: 'Illustrator', icon: '/icons/Illustrator.png', abbr: 'Ai', color: '#FF9A00', bg: '#330000' },
+    { name: 'Photoshop', icon: '/icons/Photoshop.png', abbr: 'Ps', color: '#31A8FF', bg: '#001E36' },
   ],
   portfolio: [
     { 
