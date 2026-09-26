@@ -129,35 +129,34 @@ export default function Contact() {
             <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label htmlFor="contact-name" className="block text-xs font-semibold text-zinc-300 mb-1.5">Nama Lengkap *</label>
+                  <label htmlFor="contact-name" className="block text-xs font-semibold text-zinc-300 mb-1.5">Full Name *</label>
                   <input type="text" id="contact-name" name="name" required placeholder="John Doe" className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition" />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="block text-xs font-semibold text-zinc-300 mb-1.5">Alamat Email *</label>
+                  <label htmlFor="contact-email" className="block text-xs font-semibold text-zinc-300 mb-1.5">Email Address *</label>
                   <input type="email" id="contact-email" name="email" required placeholder="john@example.com" className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition" />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="contact-subject" className="block text-xs font-semibold text-zinc-300 mb-1.5">Subjek Project *</label>
+                <label htmlFor="contact-subject" className="block text-xs font-semibold text-zinc-300 mb-1.5">Project Subject *</label>
                 <select id="contact-subject" name="subject" required className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition">
-                  <option value="" disabled selected className="bg-zinc-900 text-zinc-500">Pilih Kategori Project...</option>
+                  <option value="" disabled selected className="bg-zinc-900 text-zinc-500">Select Project Category...</option>
                   <option value="Motion Graphic Animation" className="bg-zinc-900">Motion Graphic Animation</option>
-                  <option value="UI/UX Product Design" className="bg-zinc-900">UI/UX Product Design</option>
-                  <option value="Video Editing & Post-Production" className="bg-zinc-900">Video Editing & Post-Production</option>
-                  <option value="Brand Identity & Campaign" className="bg-zinc-900">Brand Identity & Campaign</option>
+                  <option value="UI/UX Product Design" className="bg-zinc-900">UI/UX Design</option>
+                  <option value="Video Editing & Post-Production" className="bg-zinc-900">Video Editing</option>
                   <option value="Full-time / Contract Inquiry" className="bg-zinc-900">Full-time / Contract Inquiry</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="contact-message" className="block text-xs font-semibold text-zinc-300 mb-1.5">Pesan & Detail Brief *</label>
-                <textarea id="contact-message" name="message" required rows="4" placeholder="Ceritakan tujuan proyek, timeline, dan ekspektasi Anda..." className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition"></textarea>
+                <label htmlFor="contact-message" className="block text-xs font-semibold text-zinc-300 mb-1.5">Message and Brief Details *</label>
+                <textarea id="contact-message" name="message" required rows="4" placeholder="Tell us about your project goals, timeframe, your expectations, and reference links (if any)...." className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition"></textarea>
               </div>
 
               <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 rounded-xl font-bold text-white text-sm bg-gradient-to-r from-[#6260F3] to-[#F25623] hover:opacity-95 shadow-lg shadow-indigo-500/20 active:scale-[0.99] transition flex items-center justify-center gap-2">
                 {isSubmitting ? (
-                  <span>Mengirim Pesan...</span>
+                  <span>Sending Message...</span>
                 ) : (
                   <>
                     <span>Send Message</span>
@@ -172,7 +171,7 @@ export default function Contact() {
 
               {isSuccess && (
                 <div className="text-xs text-center py-2 px-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  Terima kasih! Pesan Anda telah terkirim dengan sukses.
+                  Thank you! Your message has been sent successfully.
                 </div>
               )}
             </form>
