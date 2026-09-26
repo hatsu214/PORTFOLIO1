@@ -45,6 +45,8 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'A personal project explaining the Figma application workflow, component architecture, and cloud collaboration.',
+      thumbnail: '/images/portfolio/Figma.png',
+      video: '/videos/Figma.mp4',
       accent: '#F25623'
     },
     { 
@@ -53,6 +55,8 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'A personal project explaining the Chat GPT generative application, prompts handling, and AI interface mechanics.',
+      thumbnail: '/images/portfolio/Chat Gpt.png',
+      video: '/videos/Chat Gpt.mp4',
       accent: '#F25623'
     },
     { 
@@ -61,6 +65,8 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'A personal project explaining the Pinterest visual search, curated boards, and creative discovery engine.',
+      thumbnail: '/images/portfolio/Pinterest.png',
+      video: '/videos/Pinterest.mp4',
       accent: '#F25623'
     },
     { 
@@ -69,6 +75,8 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'A promotional explainer video visualizing on-demand ride-hailing and localized digital logistics ecosystem.',
+      thumbnail: '/images/portfolio/Gojek.png',
+      video: '/videos/Gojek.mp4',
       accent: '#F25623'
     },
     { 
@@ -77,6 +85,8 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'A promotional motion video crafted for a German trading community platform highlighting real-time market signals.',
+      thumbnail: '/images/portfolio/Vaelun.png',
+      video: '/videos/Vaelun.mp4',
       accent: '#F25623'
     },
     { 
@@ -85,6 +95,7 @@ export const siteConfig = {
       type: 'Motion Graphic',
       tools: 'Ae, Pr',
       desc: 'An energetic walkthrough showcasing community server setup, voice channels, and bot integrations.',
+      video: '/videos/Discord.mp4',
       accent: '#F25623'
     },
     { 

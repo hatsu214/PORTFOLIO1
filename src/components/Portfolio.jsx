@@ -59,7 +59,16 @@ export default function Portfolio({ onOpenModal }) {
               </span>
 
               {item.thumbnail ? (
-                <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" />
+                <div className="relative w-full h-full">
+                  <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" />
+                  {item.video && (
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition">
+                      <div className="w-12 h-12 rounded-full bg-[#F25623]/90 flex items-center justify-center text-white shadow-lg shadow-orange-500/30 group-hover:scale-110 transition duration-300">
+                        <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                      </div>
+                    </div>
+                  )}
+                </div>
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 p-4 flex flex-col justify-between">
                   {/* Spacer to push content below the badge */}
