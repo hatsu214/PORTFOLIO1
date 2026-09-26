@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+  @media (min-width: 1280px) {
+    html {
+      font-size: 18px; /* Scales everything up 12.5% on desktop */
+    }
+  }
+  @media (min-width: 1536px) {
+    html {
+      font-size: 21px; /* Scales everything up ~31% on large monitors */
+    }
+  }
+
+  body {
+    background-color: #171717;
+    color: #E2E8F0;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  /* Background ambient blur lights */
+  .glow-orb-indigo {
+    background: radial-gradient(circle, rgba(98, 96, 243, 0.18) 0%, rgba(98, 96, 243, 0) 70%);
+  }
+  .glow-orb-orange {
+    background: radial-gradient(circle, rgba(242, 86, 35, 0.16) 0%, rgba(242, 86, 35, 0) 70%);
+  }
+
+  /* Subtle Glassmorphism card effect */
+  .glass-card {
+    background-color: rgba(30, 30, 35, 0.7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glass-card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  /* Custom Gradient Pill & Border */
+  .gradient-brand {
+    background: linear-gradient(135deg, #6260F3 0%, #F25623 100%);
+  }
+
+  /* Hide scrollbar for tab lists */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
