@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 const navItems = [
   { id: 'home', label: 'Home' },
@@ -30,7 +31,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
+    <motion.header 
+      className="fixed top-5 inset-x-0 z-50 flex justify-center px-4"
+      initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+    >
       <nav className="glass-card px-4 py-2 sm:px-6 sm:py-2.5 rounded-full shadow-2xl flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base font-medium border border-white/10" data-purpose="floating-navbar">
         {navItems.map(item => (
           <a
@@ -46,6 +52,6 @@ export default function Navbar() {
           </a>
         ))}
       </nav>
-    </header>
+    </motion.header>
   );
 }

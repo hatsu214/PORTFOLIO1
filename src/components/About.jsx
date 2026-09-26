@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { siteConfig } from '../data/siteConfig';
 
 export default function About() {
@@ -7,17 +8,29 @@ export default function About() {
   return (
     <section className="py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-8 scroll-mt-20" id="about">
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <motion.div 
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
         <p className="text-xs uppercase font-bold tracking-widest text-[#F25623] mb-2">— ABOUT ME —</p>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
           Passionate Creator Behind Every Frame & Pixel
         </h2>
         <div className="h-1 w-16 bg-gradient-to-r from-[#6260F3] to-[#F25623] mx-auto mt-3 rounded-full"></div>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Column: Portrait Card */}
-        <div className="lg:col-span-5 flex justify-center">
+        <motion.div 
+          className="lg:col-span-5 flex justify-center"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
           <div className="relative w-full max-w-sm rounded-2xl overflow-hidden glass-card p-3 border border-white/10 group shadow-2xl">
             {/* Portrait Container */}
             <div className="w-full aspect-[4/5] rounded-xl overflow-hidden bg-zinc-800 relative">
@@ -38,10 +51,16 @@ export default function About() {
               </svg>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Narrative, Quote & Stats */}
-        <div className="lg:col-span-7 flex flex-col justify-center space-y-6">
+        <motion.div 
+          className="lg:col-span-7 flex flex-col justify-center space-y-6"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
           {/* Quote */}
           <blockquote className="text-base sm:text-lg font-semibold text-white leading-relaxed border-l-2 border-[#6260F3] pl-4">
             {personal.aboutQuote}
@@ -58,24 +77,36 @@ export default function About() {
 
           {/* Stats Counters */}
           <div className="grid grid-cols-3 gap-3 sm:gap-4 py-2">
-            <div className="glass-card p-4 rounded-xl text-center">
+            <motion.div 
+              className="glass-card p-4 rounded-xl text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
               <span className="block text-2xl sm:text-3xl font-extrabold text-white">
                 {personal.projectsFinished}
               </span>
               <span className="text-[11px] sm:text-xs text-zinc-400 font-medium">Projects Finished</span>
-            </div>
-            <div className="glass-card p-4 rounded-xl text-center">
+            </motion.div>
+            <motion.div 
+              className="glass-card p-4 rounded-xl text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
               <span className="block text-2xl sm:text-3xl font-extrabold text-white">
                 {personal.yearsExperience}
               </span>
               <span className="text-[11px] sm:text-xs text-zinc-400 font-medium">Years Experience</span>
-            </div>
-            <div className="glass-card p-4 rounded-xl text-center">
+            </motion.div>
+            <motion.div 
+              className="glass-card p-4 rounded-xl text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
               <span className="block text-2xl sm:text-3xl font-extrabold text-white">
                 {personal.satisfiedClients}
               </span>
               <span className="text-[11px] sm:text-xs text-zinc-400 font-medium">Satisfied Clients</span>
-            </div>
+            </motion.div>
           </div>
 
           {/* Download CV Button */}
@@ -93,7 +124,7 @@ export default function About() {
               <span>Download Curriculum Vitae (PDF)</span>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
