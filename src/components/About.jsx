@@ -80,7 +80,13 @@ export default function About() {
 
           {/* Download CV Button */}
           <div>
-            <a className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-white text-xs sm:text-sm font-semibold gradient-brand shadow-lg hover:shadow-orange-500/20 transition-transform active:scale-95" href="#contact">
+            <a 
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full text-white text-xs sm:text-sm font-semibold gradient-brand shadow-lg hover:shadow-orange-500/20 transition-transform active:scale-95 cursor-pointer" 
+              href={personal.cvLink || '/CV_Yanuar_Rizky.pdf'}
+              download="CV_Yanuar_Rizki.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
               </svg>

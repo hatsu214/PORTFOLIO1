@@ -42,11 +42,16 @@ export default function Skills() {
         <p className="text-xs uppercase font-bold tracking-wider text-zinc-400 mb-8">TOOLS I USE DAILY</p>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           {tools.map((tool, i) => (
-            <div key={i} className="glass-card px-5 py-4 sm:px-6 sm:py-5 rounded-xl flex flex-col items-center gap-3 w-28 sm:w-32 hover:border-white/20 transition duration-300">
-              <div className="w-14 h-14 flex items-center justify-center">
-                <img src={tool.icon} alt={tool.name} className="w-14 h-14 object-contain" />
+            <div 
+              key={i} 
+              className="glass-card w-28 h-28 sm:w-32 sm:h-32 rounded-2xl flex flex-col items-center justify-center gap-2.5 p-3 hover:border-white/40 transition duration-300 shadow-lg"
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-zinc-900/90 flex items-center justify-center shadow-md border border-white/10 shrink-0">
+                <img src={tool.icon} alt={tool.name} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
               </div>
-              <span className="text-xs font-semibold text-zinc-300">{tool.name}</span>
+              <span className="text-[11px] sm:text-xs font-semibold text-zinc-300 text-center leading-tight truncate max-w-full px-1">
+                {tool.name}
+              </span>
             </div>
           ))}
         </div>

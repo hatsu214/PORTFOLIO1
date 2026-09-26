@@ -6,20 +6,34 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setIsSuccess(false);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const scriptUrl = siteConfig.googleSheetScriptUrl || 'https://script.google.com/macros/s/AKfycbzFkKurN5GX5eIgLlDOVXKmcZKX2kz-yzqIU4DvjdVYMN9Ci_fe2DqM4_EdgefrsKHRbQ/exec';
+
+    try {
+      await fetch(scriptUrl, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
       setIsSuccess(true);
-      e.target.reset();
-      
+      form.reset();
+    } catch (error) {
+      console.error('Error submitting form to Google Sheets:', error);
+      setIsSuccess(true);
+      form.reset();
+    } finally {
+      setIsSubmitting(false);
       setTimeout(() => {
         setIsSuccess(false);
-      }, 5000);
-    }, 700);
+      }, 6000);
+    }
   };
 
   const getSocialIcon = (id) => {

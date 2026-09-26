@@ -18,7 +18,9 @@ export const siteConfig = {
     yearsExperience: '4+',
     projectsFinished: '20+',
     satisfiedClients: '15+',
+    cvLink: '/CV_Yanuar_Rizky.pdf',
   },
+  googleSheetScriptUrl: 'https://script.google.com/macros/s/AKfycbzFkKurN5GX5eIgLlDOVXKmcZKX2kz-yzqIU4DvjdVYMN9Ci_fe2DqM4_EdgefrsKHRbQ/exec',
   socials: [
     { name: 'LinkedIn', url: 'https://linkedin.com', id: 'linkedin' },
     { name: 'TikTok', url: 'https://tiktok.com', id: 'tiktok' },
@@ -29,12 +31,12 @@ export const siteConfig = {
     { name: 'UI/UX Designer', percentage: 85, desc: 'Human-centered interfaces, wireframing, high-fidelity prototypes, design system curation, and cross-platform UX validation.', color: '#F25623' }
   ],
   tools: [
-    { name: 'After Effect', icon: '/icons/After_effect.svg', abbr: 'Ae', color: '#9999FF', bg: '#00005B' },
-    { name: 'Premiere Pro', icon: '/icons/Premiere pro.svg', abbr: 'Pr', color: '#EA77FF', bg: '#000055' },
-    { name: 'Figma', icon: '/icons/Figma.svg', type: 'image' },
-    { name: 'Capcut', icon: '/icons/Capcut.svg', type: 'image' },
-    { name: 'Illustrator', icon: '/icons/Illustrator.svg', abbr: 'Ai', color: '#FF9A00', bg: '#330000' },
-    { name: 'Photoshop', icon: '/icons/Photoshop.svg', abbr: 'Ps', color: '#31A8FF', bg: '#001E36' },
+    { name: 'After Effect', icon: '/icons/After Effect.png' },
+    { name: 'Premiere Pro', icon: '/icons/Premiere Pro.png' },
+    { name: 'Figma', icon: '/icons/Figma.png' },
+    { name: 'Capcut', icon: '/icons/Capcut.png' },
+    { name: 'Illustrator', icon: '/icons/Illustrator.png' },
+    { name: 'Photoshop', icon: '/icons/Photoshop.png' },
   ],
   portfolio: [
     { 

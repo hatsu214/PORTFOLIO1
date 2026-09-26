@@ -52,8 +52,31 @@ export default function ProjectModal({ isOpen, onClose, project }) {
         {/* Modal Title */}
         <h3 className="text-xl sm:text-2xl font-black text-white mb-3">{project.title}</h3>
 
-        {/* Modal Visual Banner */}
-        {project.thumbnail ? (
+        {/* Modal Visual Banner / Video */}
+        {project.video ? (
+          <div className="w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 border border-white/10 bg-black flex items-center justify-center">
+            {project.video.includes('embed') || project.video.includes('youtube') || project.video.includes('vimeo') ? (
+              <iframe 
+                src={project.video} 
+                title={project.title}
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <video 
+                controls 
+                autoPlay 
+                playsInline 
+                poster={project.thumbnail}
+                className="w-full h-full object-contain bg-black"
+              >
+                <source src={project.video} type="video/mp4" />
+                Browser Anda tidak mendukung pemutaran video.
+              </video>
+            )}
+          </div>
+        ) : project.thumbnail ? (
           <div className="w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 border border-white/10">
             <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover" />
           </div>
