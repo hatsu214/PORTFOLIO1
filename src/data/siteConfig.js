@@ -20,7 +20,7 @@ export const siteConfig = {
     satisfiedClients: '15+',
     cvLink: '/CV_Yanuar_Rizky.pdf',
   },
-  googleSheetScriptUrl: 'https://script.google.com/macros/s/AKfycbzFkKurN5GX5eIgLlDOVXKmcZKX2kz-yzqIU4DvjdVYMN9Ci_fe2DqM4_EdgefrsKHRbQ/exec',
+  googleSheetScriptUrl: 'https://script.google.com/macros/s/AKfycbwGOUlkxja8QqwrKAm6mBcHnlVNlnebIKoBvycpI4ivHmhV-E_2SWp0o2OZ1Rw6DzeoUA/exec',
   socials: [
     { name: 'LinkedIn', url: 'linkedin.com/in/yanuar-rizki-94805b23b', id: 'linkedin' },
     { name: 'TikTok', url: 'https://www.tiktok.com/@hatsu6961?is_from_webapp=1&sender_device=pc', id: 'tiktok' },
