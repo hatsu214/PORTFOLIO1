@@ -171,7 +171,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="contact-message" className="block text-xs font-semibold text-zinc-300 mb-1.5">Pesan & Detail Brief *</label>
-                <textarea id="contact-message" name="message" required rows="4" placeholder="Ceritakan tujuan proyek, timeline, dan ekspektasi Anda..." className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition"></textarea>
+                <textarea id="contact-message" name="message" required rows="4" placeholder="Tell us about your project goals, timeline, and expectations..." className="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white placeholder-zinc-500 text-sm focus:border-[#6260F3] focus:ring-1 focus:ring-[#6260F3] transition"></textarea>
               </div>
 
               <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 rounded-xl font-bold text-white text-sm bg-gradient-to-r from-[#6260F3] to-[#F25623] hover:opacity-95 shadow-lg shadow-indigo-500/20 active:scale-[0.99] transition flex items-center justify-center gap-2">
