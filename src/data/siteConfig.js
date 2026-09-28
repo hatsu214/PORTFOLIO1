@@ -11,7 +11,7 @@ export const siteConfig = {
       "With experience as a UI/UX designer at a startup, a video editor for a YouTube channel, and a freelance motion graphic designer, I've learned to adapt across industries from building intuitive interfaces to bringing brands to life through motion. To me, design isn't just about how it looks, but how it works, speaks, and tells its story."
     ],
     profileImage: '/images/yanuar-bulat.png',
-    aboutImage: '/images/aboutme.png', // Reusing profile image based on design, can swap here
+    aboutImage: '/images/aboutme2.png', // Reusing profile image based on design, can swap here
     email: 'yanuarrizky214@gmail.com',
     whatsapp: '+62 896-6301-8197',
     waLink: 'https://wa.me/6289663018197',
@@ -105,8 +105,7 @@ export const siteConfig = {
       tools: 'Figma',
       desc: 'A luxury e-commerce watch store website interface designed for connoisseurs seeking timeless elegance and checkout velocity.',
       thumbnail: '/images/portfolio/195.png',
-      visualClass: 'from-blue-950 via-slate-900 to-black border-blue-500/20',
-      badgeClass: 'bg-blue-900/60 text-blue-300 border-blue-400/30'
+      prototypeUrl: 'https://www.figma.com/proto/eySVfZxn07UHqzSXgKVYt0/yanuar?node-id=221-1650&t=nukABymmIBsIwc8P-1',
     },
     { 
       title: 'ANIWEB', 
@@ -115,8 +114,7 @@ export const siteConfig = {
       tools: 'Figma',
       desc: 'A sleek anime streaming and community platform offering episode cataloging, watchlist tracking, and interactive discussions.',
       thumbnail: '/images/portfolio/194.png',
-      visualClass: 'from-purple-950 via-zinc-900 to-black border-purple-500/20',
-      badgeClass: 'bg-purple-900/60 text-purple-300 border-purple-400/30'
+      prototypeUrl: 'https://www.figma.com/proto/eySVfZxn07UHqzSXgKVYt0/yanuar?node-id=27-14&t=nukABymmIBsIwc8P-1',
     },
     { 
       title: 'Mangan Yuk', 
@@ -125,8 +123,7 @@ export const siteConfig = {
       tools: 'Figma',
       desc: 'A mobile food ordering and purchasing application designed to streamline contactless menus, cart checkout, and vendor discovery.',
       thumbnail: '/images/portfolio/193.png',
-      visualClass: 'from-amber-950 via-zinc-900 to-black border-amber-500/20',
-      badgeClass: 'bg-amber-900/60 text-amber-300 border-amber-400/30'
+      prototypeUrl: 'https://www.figma.com/proto/BTwWkmEETLdjNciaZKguKJ/Design?node-id=1-3&t=HLHpaKAqq4OeGUxQ-1',
     },
     { 
       title: 'Ceramic Village', 

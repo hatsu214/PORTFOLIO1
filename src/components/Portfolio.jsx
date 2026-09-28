@@ -45,9 +45,9 @@ export default function Portfolio({ onOpenModal }) {
             <button
               key={f.id}
               onClick={() => setFilter(f.id)}
-              className={`px-4 py-2 rounded-full transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full transition-colors duration-300 relative ${
                 filter === f.id
-                  ? 'bg-[#F25623] text-white shadow'
+                  ? 'bg-[#F25623] text-white shadow font-semibold'
                   : 'text-zinc-400 hover:text-white hover:bg-white/5'
               }`}
             >
@@ -57,32 +57,37 @@ export default function Portfolio({ onOpenModal }) {
         </div>
       </motion.div>
 
-      {/* Portfolio Grid Items */}
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-        <AnimatePresence>
+      {/* Portfolio Grid Items with Smooth Mode Switch */}
+      <AnimatePresence mode="wait">
+        <motion.div 
+          key={filter}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -15 }}
+          transition={{ duration: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7"
+        >
           {filteredPortfolio.map((item, i) => (
             <motion.article 
-              layout
               key={item.title} 
               onClick={() => onOpenModal(item)}
-              className="portfolio-card glass-card rounded-2xl overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-1.5"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-              whileHover={{ y: -6 }}
+              className="portfolio-card glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: i * 0.05 }}
+              whileHover={{ y: -7, transition: { duration: 0.2 } }}
             >
               <div className={`relative aspect-[16/10] bg-zinc-900 overflow-hidden border-b border-white/5 flex items-center justify-center ${item.thumbnail ? 'p-0' : 'p-4'}`}>
-                {/* Category Badge — shown on ALL cards */}
-                <span className="absolute top-3 left-3 z-10 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-black/50 text-zinc-200 border border-white/10 backdrop-blur-sm">
+                {/* Category Badge */}
+                <span className="absolute top-3 left-3 z-10 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded bg-black/60 text-zinc-200 border border-white/10 backdrop-blur-sm">
                   {item.category === 'motion' ? 'Motion Graphic' : item.category === 'uiux' ? 'UI/UX' : 'Design'}
                 </span>
 
                 {item.thumbnail ? (
                   <div className="relative w-full h-full">
-                    <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover" />
+                    <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     {item.video && (
-                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition">
+                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center group-hover:bg-black/20 transition-colors">
                         <div className="w-12 h-12 rounded-full bg-[#F25623]/90 flex items-center justify-center text-white shadow-lg shadow-orange-500/30 group-hover:scale-110 transition duration-300">
                           <svg className="w-5 h-5 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
                         </div>
@@ -91,7 +96,6 @@ export default function Portfolio({ onOpenModal }) {
                   </div>
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-950 p-4 flex flex-col justify-between">
-                    {/* Spacer to push content below the badge */}
                     <div></div>
                     <div className="flex items-center justify-center">
                       <div className="w-12 h-12 rounded-full bg-[#F25623]/90 flex items-center justify-center text-white shadow-lg shadow-orange-500/30 group-hover:scale-110 transition duration-300">
@@ -115,18 +119,32 @@ export default function Portfolio({ onOpenModal }) {
                 <h3 className="text-base font-bold text-white mb-2 group-hover:text-[#F25623] transition-colors">{item.title}</h3>
                 <p className="text-xs text-zinc-400 line-clamp-2 mb-4 font-body">{item.desc}</p>
                 
-                <div className="flex items-center gap-1.5">
-                  {item.tools.split(', ').map(tool => (
-                    <span key={tool} className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/10 text-zinc-300 border border-white/10">
-                      {tool}
-                    </span>
-                  ))}
+                <div className="flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5">
+                    {item.tools.split(', ').map(tool => (
+                      <span key={tool} className="text-[10px] font-bold px-2 py-0.5 rounded bg-white/10 text-zinc-300 border border-white/10">
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  {item.prototypeUrl && (
+                    <a 
+                      href={item.prototypeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-[#6260F3]/20 hover:bg-[#6260F3] text-white border border-[#6260F3]/40 transition duration-300"
+                    >
+                      Prototype ↗
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
           ))}
-        </AnimatePresence>
-      </motion.div>
+        </motion.div>
+      </AnimatePresence>
     </section>
   );
 }

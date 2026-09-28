@@ -43,7 +43,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
         </button>
 
         {/* Modal Badge Category */}
-        <div className="mb-3">
+        <div className="mb-3 flex items-center gap-2">
           <span className="text-xs font-bold px-2.5 py-1 rounded bg-[#6260F3]/20 text-[#6260F3] border border-[#6260F3]/40 uppercase tracking-wide">
             {project.type}
           </span>
@@ -57,6 +57,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           <div className="w-full aspect-[16/9] rounded-xl overflow-hidden mb-4 border border-white/10 bg-black flex items-center justify-center">
             {project.video.includes('embed') || project.video.includes('youtube') || project.video.includes('vimeo') ? (
               <iframe 
+                key={project.video}
                 src={project.video} 
                 title={project.title}
                 className="w-full h-full border-0"
@@ -65,6 +66,7 @@ export default function ProjectModal({ isOpen, onClose, project }) {
               />
             ) : (
               <video 
+                key={project.video}
                 controls 
                 autoPlay 
                 playsInline 
@@ -96,19 +98,32 @@ export default function ProjectModal({ isOpen, onClose, project }) {
           {project.desc}
         </p>
 
-        {/* Tools Used in Modal */}
-        <div className="flex items-center justify-between pt-4 border-t border-white/10 text-xs">
+        {/* Tools & Prototype Action Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-white/10 text-xs">
           <div className="flex items-center gap-2">
             <span className="text-zinc-400 font-medium">Tools used:</span>
             <span className="font-bold text-white">{project.tools}</span>
           </div>
-          <a 
-            onClick={onClose}
-            href="#contact" 
-            className="inline-flex items-center gap-1 text-xs font-bold text-[#F25623] hover:underline"
-          >
-            Discuss similar project →
-          </a>
+
+          <div className="flex items-center gap-3">
+            {project.prototypeUrl && (
+              <a 
+                href={project.prototypeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold text-white bg-gradient-to-r from-[#6260F3] to-[#F25623] hover:opacity-95 transition shadow-lg active:scale-95"
+              >
+                <span>View Prototype ↗</span>
+              </a>
+            )}
+            <a 
+              onClick={onClose}
+              href="#contact" 
+              className="inline-flex items-center gap-1 text-xs font-bold text-[#F25623] hover:underline"
+            >
+              Discuss project →
+            </a>
+          </div>
         </div>
       </div>
     </div>
