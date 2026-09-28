@@ -74,7 +74,7 @@ export default function Hero() {
           variants={itemVariants}
         >
           <a className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 bg-gradient-to-r from-[#6260F3] to-[#F25623] hover:opacity-95 transform hover:-translate-y-0.5" href="#portfolio">
-            <span>Lihat Portfolio</span>
+            <span>View Portfolio</span>
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
             </svg>
@@ -83,7 +83,7 @@ export default function Hero() {
             <svg className="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
             </svg>
-            <span>Hubungi Saya</span>
+            <span>Contact Me</span>
           </a>
         </motion.div>
       </motion.div>
